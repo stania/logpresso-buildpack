@@ -1,0 +1,5 @@
+---
+logpresso:
+    - INSTANCE_ID: "ARAQNE"
+    - HEAP_MAX: "512M"
+    - DIRECTMEMORY_MAX: "512M"

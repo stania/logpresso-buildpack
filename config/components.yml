@@ -24,6 +24,7 @@ containers:
   - "JavaBuildpack::Container::SpringBoot"
   - "JavaBuildpack::Container::SpringBootCLI"
   - "JavaBuildpack::Container::Tomcat"
+  - "JavaBuildpack::Container::Logpresso"
 
 # In order to use Oracle JREs instead of OpenJDK, you must comment out the OpenJDK line and uncomment the Oracle line.
 # In order to use Zulu JREs instead of OpenJDK, you must comment out the OpenJDK line and uncomment the Zulu line.
