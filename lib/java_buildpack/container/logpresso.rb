@@ -94,6 +94,7 @@ module JavaBuildpack
           "-XX:MaxDirectMemorySize=#{@config["DIRECTMEMORY_MAX"].to_s}",
           "-jar #{qualify_path @droplet.root, @droplet.root}/#{@core_name}"
         ].flatten.compact.join(' ')
+      end	
 
       private
 

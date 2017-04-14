@@ -30,6 +30,8 @@ require 'java_buildpack/util/snake_case'
 require 'java_buildpack/util/space_case'
 require 'pathname'
 
+$DEBUG=ENV.key? 'RDEBUG'
+
 module JavaBuildpack
 
   # Encapsulates the detection, compile, and release functionality for Java application
@@ -77,6 +79,8 @@ module JavaBuildpack
       commands << component_detection('JRE', @jres, true).first.release
       component_detection('framework', @frameworks, false).map(&:release)
       commands << container.release
+
+      commands = commands.select do | elem | elem.length > 1 end
 
       command = commands.flatten.compact.join(' && ')
 
